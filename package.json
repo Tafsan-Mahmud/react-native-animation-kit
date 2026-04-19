@@ -43,14 +43,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_USERNAME/rn-animate.git"
+    "url": "git+https://github.com/Tafsan-Mahmud/react-native-animation-kit.git"
   },
   "author": "Abu Hasnat Nobin tafsanmahmudnobin090@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/rn-animate/issues"
+    "url": "https://github.com/Tafsan-Mahmud/react-native-animation-kit/issues"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/rn-animate#readme",
+  "homepage": "https://github.com/Tafsan-Mahmud/react-native-animation-kit#readme",
   "peerDependencies": {
     "react": "*",
     "react-native": "*"

@@ -1,23 +1,27 @@
 <div align="center">
 
-# rn-animate
+<a href="https://www.npmjs.com/package/react-native-animation-kit">
+  <img src="https://capsule-render.vercel.app/api?type=soft&color=0:000000,60:0d1117,100:1a1a2e&height=90&text=react-native-animation-kit&fontSize=28&fontColor=ffffff&animation=twinkling" width="82%"/>
+</a>
 
 **Premium animation components for React Native.**
 
-Zero dependencies · Native driver only · Fully typed · Expo ready
+React Native animation library with fade, slide, bounce, spring, flip, shake, stagger and more. Zero dependencies. Native driver only.
 
-[![npm version](https://img.shields.io/npm/v/rn-animate?style=flat-square&colorA=18181b&colorB=18181b)](https://www.npmjs.com/package/rn-animate)
-[![npm downloads](https://img.shields.io/npm/dm/rn-animate?style=flat-square&colorA=18181b&colorB=18181b)](https://www.npmjs.com/package/rn-animate)
-[![license](https://img.shields.io/npm/l/rn-animate?style=flat-square&colorA=18181b&colorB=18181b)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/react-native-animation-kit?style=flat-square&colorA=18181b&colorB=18181b)](https://www.npmjs.com/package/react-native-animation-kit)
+[![npm downloads](https://img.shields.io/npm/dm/react-native-animation-kit?style=flat-square&colorA=18181b&colorB=18181b)](https://www.npmjs.com/package/react-native-animation-kit)
+[![license](https://img.shields.io/npm/l/react-native-animation-kit?style=flat-square&colorA=18181b&colorB=18181b)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-ready-blue?style=flat-square&colorA=18181b&colorB=3178c6)](https://www.typescriptlang.org)
+[![Expo](https://img.shields.io/badge/Expo-compatible-000020?style=flat-square&colorA=18181b&colorB=000020&logo=expo)](https://expo.dev)
 
 </div>
 
 ---
 
-## Why rn-animate?
+## Why react-native-animation-kit?
 
-Most animation libraries for React Native either require heavy native setup (Reanimated, Gesture Handler) or produce janky JS-thread animations. `rn-animate` is different:
+Most animation libraries for React Native either require heavy native setup (Reanimated, Gesture Handler) or produce janky JS-thread animations. `react-native-animation-kit` is different:
+
 
 - **Zero dependencies** — only `react` and `react-native`. No linking, no pods, no setup.
 - **100% native driver** — every animation runs on the UI thread. Silky smooth on any device.
@@ -30,11 +34,11 @@ Most animation libraries for React Native either require heavy native setup (Rea
 ## Installation
 
 ```bash
-npm install rn-animate
+npm install react-native-animation-kit
 ```
 
 ```bash
-yarn add rn-animate
+yarn add react-native-animation-kit
 ```
 
 No additional setup. Works with React Native and Expo out of the box.
@@ -85,7 +89,7 @@ No additional setup. Works with React Native and Expo out of the box.
 The most versatile entrance animation. Combines fade with a directional slide.
 
 ```tsx
-import { FadeSlideIn } from 'rn-animate';
+import { FadeSlideIn } from 'react-native-animation-kit';
 
 // Basic — slides up from 35px, fades in
 <FadeSlideIn>
@@ -125,7 +129,7 @@ import { FadeSlideIn } from 'rn-animate';
 The lightest entrance. Pure opacity, no movement.
 
 ```tsx
-import { FadeIn } from 'rn-animate';
+import { FadeIn } from 'react-native-animation-kit';
 
 <FadeIn delay={100}>
   <TooltipOverlay />
@@ -144,7 +148,7 @@ import { FadeIn } from 'rn-animate';
 Scale + fade entrance. Feels modern and polished — great for modals and screen transitions.
 
 ```tsx
-import { ZoomFadeIn } from 'rn-animate';
+import { ZoomFadeIn } from 'react-native-animation-kit';
 
 <ZoomFadeIn>
   <ModalContent />
@@ -169,7 +173,7 @@ import { ZoomFadeIn } from 'rn-animate';
 Spring-powered entrance with a natural bounce. More energetic than `FadeSlideIn` — use for success states, empty screens, and hero elements.
 
 ```tsx
-import { BounceIn } from 'rn-animate';
+import { BounceIn } from 'react-native-animation-kit';
 
 <BounceIn>
   <SuccessIllustration />
@@ -196,7 +200,7 @@ import { BounceIn } from 'rn-animate';
 Grows from zero with a satisfying spring overshoot. Ideal for confirmation icons, badges, and FABs appearing on screen.
 
 ```tsx
-import { ScalePop } from 'rn-animate';
+import { ScalePop } from 'react-native-animation-kit';
 
 <ScalePop>
   <SuccessIcon />
@@ -223,7 +227,7 @@ import { ScalePop } from 'rn-animate';
 Looping scale pulse. Draws user attention without being distracting. Use for live indicators, notification dots, and CTAs.
 
 ```tsx
-import { Pulse } from 'rn-animate';
+import { Pulse } from 'react-native-animation-kit';
 
 // Live indicator dot
 <Pulse>
@@ -250,7 +254,7 @@ import { Pulse } from 'rn-animate';
 Continuous rotation. Wrap any icon or view — instant spinner.
 
 ```tsx
-import { Spin } from 'rn-animate';
+import { Spin } from 'react-native-animation-kit';
 
 <Spin>
   <LoaderIcon size={24} />
@@ -274,7 +278,7 @@ import { Spin } from 'rn-animate';
 Gentle vertical float loop. Use for scroll indicators, empty state illustrations, and floating CTAs.
 
 ```tsx
-import { LoopBounce } from 'rn-animate';
+import { LoopBounce } from 'react-native-animation-kit';
 
 // Scroll cue
 <LoopBounce>
@@ -301,7 +305,7 @@ import { LoopBounce } from 'rn-animate';
 Drop-in replacement for `TouchableOpacity` with a more physical, premium press feel.
 
 ```tsx
-import { PressScale } from 'rn-animate';
+import { PressScale } from 'react-native-animation-kit';
 
 <PressScale onPress={handleSubmit}>
   <View style={styles.button}>
@@ -329,7 +333,7 @@ import { PressScale } from 'rn-animate';
 Horizontal shake for error feedback. Triggered imperatively via ref — call `.shake()` whenever validation fails.
 
 ```tsx
-import { Shake, ShakeRef } from 'rn-animate';
+import { Shake, ShakeRef } from 'react-native-animation-kit';
 
 const shakeRef = useRef<ShakeRef>(null);
 
@@ -361,7 +365,7 @@ const handleLogin = async () => {
 3D card flip between two faces. Fully controlled via the `flipped` prop.
 
 ```tsx
-import { Flip } from 'rn-animate';
+import { Flip } from 'react-native-animation-kit';
 
 const [flipped, setFlipped] = useState(false);
 
@@ -388,7 +392,7 @@ const [flipped, setFlipped] = useState(false);
 Wraps every child in a `FadeSlideIn` with automatically calculated stagger delays. The cleanest way to animate lists.
 
 ```tsx
-import { Stagger } from 'rn-animate';
+import { Stagger } from 'react-native-animation-kit';
 
 // Auto-staggers all children
 <Stagger>
@@ -420,7 +424,7 @@ import { Stagger } from 'rn-animate';
 Animated number counter. Counts from one value to another with an eased animation.
 
 ```tsx
-import { CountUp } from 'rn-animate';
+import { CountUp } from 'react-native-animation-kit';
 
 // Currency
 <CountUp to={1240} prefix="$" />
@@ -569,3 +573,9 @@ const handleSubmit = async () => {
 ## License
 
 MIT © [Abu Hasnat Nobin](https://github.com/Tafsan-Mahmud)
+
+---
+
+<div align="center">
+  <sub>If this helped you, consider giving it a ⭐ on GitHub</sub>
+</div>
