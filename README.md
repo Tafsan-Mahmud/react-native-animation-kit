@@ -1,18 +1,18 @@
 <div align="center">
 
 <a href="https://www.npmjs.com/package/react-native-animation-kit">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=0:000000,60:0d1117,100:1a1a2e&height=90&text=react-native-animation-kit&fontSize=28&fontColor=ffffff&animation=twinkling" width="82%"/>
+  <img src="https://capsule-render.vercel.app/api?type=soft&color=0:000000,60:0d1b4b,100:b91c1c&height=95&text=react-native-animation-kit&fontSize=30&fontColor=ffffff&animation=twinkling" width="82%"/>
 </a>
 
 **Premium animation components for React Native.**
 
 React Native animation library with fade, slide, bounce, spring, flip, shake, stagger and more. Zero dependencies. Native driver only.
 
-[![npm version](https://img.shields.io/npm/v/react-native-animation-kit?style=flat-square&colorA=18181b&colorB=18181b)](https://www.npmjs.com/package/react-native-animation-kit)
-[![npm downloads](https://img.shields.io/npm/dm/react-native-animation-kit?style=flat-square&colorA=18181b&colorB=18181b)](https://www.npmjs.com/package/react-native-animation-kit)
-[![license](https://img.shields.io/npm/l/react-native-animation-kit?style=flat-square&colorA=18181b&colorB=18181b)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/react-native-animation-kit?style=for-the-badge&color=1d4ed8&labelColor=0a0a0a&label=VERSION)](https://www.npmjs.com/package/react-native-animation-kit)
+[![npm downloads](https://img.shields.io/npm/dm/react-native-animation-kit?style=for-the-badge&color=b91c1c&labelColor=0a0a0a&label=DOWNLOADS%2FMO)](https://www.npmjs.com/package/react-native-animation-kit)
+[![npm total](https://img.shields.io/npm/dt/react-native-animation-kit?style=for-the-badge&color=dc2626&labelColor=0a0a0a&label=TOTAL+INSTALLS)](https://www.npmjs.com/package/react-native-animation-kit)
 [![TypeScript](https://img.shields.io/badge/TypeScript-ready-blue?style=flat-square&colorA=18181b&colorB=3178c6)](https://www.typescriptlang.org)
-[![Expo](https://img.shields.io/badge/Expo-compatible-000020?style=flat-square&colorA=18181b&colorB=000020&logo=expo)](https://expo.dev)
+[![license](https://img.shields.io/npm/l/react-native-animation-kit?style=for-the-badge&color=1e3a8a&labelColor=0a0a0a)](LICENSE)
 
 </div>
 
