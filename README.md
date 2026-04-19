@@ -17,7 +17,7 @@ React Native animation library with fade, slide, bounce, spring, flip, shake, st
 </div>
 
 ---
-
+ 
 ## Why react-native-animation-kit?
 
 Most animation libraries for React Native either require heavy native setup (Reanimated, Gesture Handler) or produce janky JS-thread animations. `react-native-animation-kit` is different:
