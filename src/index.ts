@@ -33,3 +33,6 @@ export type { ShakeProps, ShakeRef } from './components/Shake';
 export type { FlipProps }            from './components/Flip';
 export type { StaggerProps }         from './components/Stagger';
 export type { CountUpProps }         from './components/CountUp';
+// in index.ts add these two lines
+export { default as Float }      from './components/Float';
+export type { FloatProps }       from './components/Float';

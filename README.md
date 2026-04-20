@@ -11,7 +11,6 @@ React Native animation library with fade, slide, bounce, spring, flip, shake, st
 [![npm version](https://img.shields.io/npm/v/react-native-animation-kit?style=for-the-badge&color=1d4ed8&labelColor=0a0a0a&label=VERSION)](https://www.npmjs.com/package/react-native-animation-kit)
 [![npm downloads](https://img.shields.io/npm/dm/react-native-animation-kit?style=for-the-badge&color=b91c1c&labelColor=0a0a0a&label=DOWNLOADS%2FMO)](https://www.npmjs.com/package/react-native-animation-kit)
 [![npm total](https://img.shields.io/npm/dt/react-native-animation-kit?style=for-the-badge&color=dc2626&labelColor=0a0a0a&label=TOTAL+INSTALLS)](https://www.npmjs.com/package/react-native-animation-kit)
-[![TypeScript](https://img.shields.io/badge/TypeScript-ready-blue?style=flat-square&colorA=18181b&colorB=3178c6)](https://www.typescriptlang.org)
 [![license](https://img.shields.io/npm/l/react-native-animation-kit?style=for-the-badge&color=1e3a8a&labelColor=0a0a0a)](LICENSE)
 
 </div>
