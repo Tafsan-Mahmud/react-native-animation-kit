@@ -3,6 +3,7 @@
 <a href="https://www.npmjs.com/package/react-native-animation-kit">
   <img src="https://capsule-render.vercel.app/api?type=soft&color=0:000000,60:0d1b4b,100:b91c1c&height=90&text=react-native-animation-kit&fontSize=28&fontColor=ffffff&animation=twinkling" width="82%"/>
 </a>
+
 **Premium animation components for React Native.**
 
 React Native animation library with fade, slide, bounce, spring, flip, shake, float, stagger and more. Zero dependencies. Native driver only.
