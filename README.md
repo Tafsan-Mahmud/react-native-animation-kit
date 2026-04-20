@@ -1,12 +1,12 @@
 <div align="center">
 
 <a href="https://www.npmjs.com/package/react-native-animation-kit">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=0:000000,60:0d1b4b,100:b91c1c&height=95&text=react-native-animation-kit&fontSize=30&fontColor=ffffff&animation=twinkling" width="82%"/>
+  <img src="https://capsule-render.vercel.app/api?type=soft&color=0:000000,60:0d1117,100:1a1a2e&height=90&text=react-native-animation-kit&fontSize=28&fontColor=ffffff&animation=twinkling" width="82%"/>
 </a>
 
 **Premium animation components for React Native.**
 
-React Native animation library with fade, slide, bounce, spring, flip, shake, stagger and more. Zero dependencies. Native driver only.
+React Native animation library with fade, slide, bounce, spring, flip, shake, float, stagger and more. Zero dependencies. Native driver only.
 
 [![npm version](https://img.shields.io/npm/v/react-native-animation-kit?style=for-the-badge&color=1d4ed8&labelColor=0a0a0a&label=VERSION)](https://www.npmjs.com/package/react-native-animation-kit)
 [![npm downloads](https://img.shields.io/npm/dm/react-native-animation-kit?style=for-the-badge&color=b91c1c&labelColor=0a0a0a&label=DOWNLOADS%2FMO)](https://www.npmjs.com/package/react-native-animation-kit)
@@ -16,15 +16,14 @@ React Native animation library with fade, slide, bounce, spring, flip, shake, st
 </div>
 
 ---
- 
+
 ## Why react-native-animation-kit?
 
 Most animation libraries for React Native either require heavy native setup (Reanimated, Gesture Handler) or produce janky JS-thread animations. `react-native-animation-kit` is different:
 
-
 - **Zero dependencies** — only `react` and `react-native`. No linking, no pods, no setup.
 - **100% native driver** — every animation runs on the UI thread. Silky smooth on any device.
-- **13 ready-to-use components** — entrances, loops, interactions, and utilities. Every daily need covered.
+- **14 ready-to-use components** — entrances, loops, interactions, and utilities. Every daily need covered.
 - **Sensible defaults** — drop in any component with zero config. Customize when you need to.
 - **Fully typed** — complete TypeScript support with exported prop types.
 
@@ -60,9 +59,10 @@ No additional setup. Works with React Native and Expo out of the box.
 
 | Component | Description |
 |---|---|
+| [`Float`](#float) | Multi-axis floating — Y movement + rotation + scale. Premium feel. |
 | [`Pulse`](#pulse) | Breathe in/out scale loop. Draws attention without distraction. |
 | [`Spin`](#spin) | Continuous rotation. Zero-config spinner wrapper. |
-| [`LoopBounce`](#loopbounce) | Gentle floating bounce. Great for scroll cues and empty states. |
+| [`LoopBounce`](#loopbounce) | Simple vertical bounce loop. Great for scroll cues. |
 
 ### Interaction
 
@@ -221,6 +221,51 @@ import { ScalePop } from 'react-native-animation-kit';
 
 ---
 
+### Float <a id="float"></a>
+
+Premium multi-axis floating animation. Combines vertical movement, subtle rotation, and gentle scale simultaneously for a truly lifelike floating effect — far more premium than a simple bounce.
+
+```tsx
+import { Float } from 'react-native-animation-kit';
+
+// Basic float
+<Float>
+  <IllustrationImage />
+</Float>
+
+// Buoyant variant — more lively
+<Float variant="buoyant" height={10}>
+  <HeroCard />
+</Float>
+
+// Pure vertical — no rotation or scale
+<Float rotate={0} maxScale={1}>
+  <FloatingBadge />
+</Float>
+
+// Layered depth effect — stagger delays create parallax
+<Float delay={0} height={4} rotate={0.5}>
+  <BackgroundLayer />
+</Float>
+<Float delay={400} height={8} rotate={1.5}>
+  <MiddleLayer />
+</Float>
+<Float delay={800} height={12} rotate={2}>
+  <ForegroundBadge />
+</Float>
+```
+
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `height` | `number` | `8` | Vertical float distance in px |
+| `rotate` | `number` | `1.5` | Peak rotation in degrees. `0` to disable |
+| `maxScale` | `number` | `1.03` | Peak scale. `1` to disable |
+| `duration` | `number` | `2400` | Full cycle duration in ms |
+| `delay` | `number` | `0` | Start delay in ms — use to stagger multiple floaters |
+| `variant` | `'gentle' \| 'buoyant'` | `'gentle'` | `gentle` = smooth sine, `buoyant` = springy feel |
+
+---
+
 ### Pulse <a id="pulse"></a>
 
 Looping scale pulse. Draws user attention without being distracting. Use for live indicators, notification dots, and CTAs.
@@ -274,19 +319,13 @@ import { Spin } from 'react-native-animation-kit';
 
 ### LoopBounce <a id="loopbounce"></a>
 
-Gentle vertical float loop. Use for scroll indicators, empty state illustrations, and floating CTAs.
+Simple vertical bounce loop. Use for scroll indicators and lightweight looping cues.
 
 ```tsx
 import { LoopBounce } from 'react-native-animation-kit';
 
-// Scroll cue
 <LoopBounce>
   <ChevronDownIcon />
-</LoopBounce>
-
-// Slow, subtle float
-<LoopBounce height={6} duration={2000}>
-  <FloatingCard />
 </LoopBounce>
 ```
 
@@ -462,6 +501,8 @@ import { CountUp } from 'react-native-animation-kit';
 Cap the delay on long lists so items deep in the list don't wait too long:
 
 ```tsx
+import { FadeSlideIn } from 'react-native-animation-kit';
+
 const renderItem = ({ item, index }) => (
   <FadeSlideIn delay={Math.min(index * 80, 400)}>
     <ItemCard item={item} />
@@ -482,6 +523,8 @@ const renderItem = ({ item, index }) => (
 Wrap your screen content for a polished entry on every navigation:
 
 ```tsx
+import { FadeSlideIn } from 'react-native-animation-kit';
+
 export default function ProfileScreen() {
   return (
     <FadeSlideIn duration={300}>
@@ -495,11 +538,39 @@ export default function ProfileScreen() {
 
 ---
 
+### Onboarding hero with layered float
+
+Stack multiple `Float` components with different delays to create a parallax depth effect:
+
+```tsx
+import { Float, FadeSlideIn } from 'react-native-animation-kit';
+
+<View style={styles.hero}>
+  <Float delay={0} height={4} rotate={0.5}>
+    <BackgroundIllustration />
+  </Float>
+  <Float delay={300} height={8} rotate={1.5}>
+    <HeroCharacter />
+  </Float>
+  <Float delay={600} height={12} rotate={2}>
+    <FloatingBadge />
+  </Float>
+
+  <FadeSlideIn delay={400}>
+    <Text style={styles.headline}>Welcome</Text>
+  </FadeSlideIn>
+</View>
+```
+
+---
+
 ### Success state
 
 Combine `ScalePop` and `FadeSlideIn` for a satisfying confirmation screen:
 
 ```tsx
+import { ScalePop, FadeSlideIn } from 'react-native-animation-kit';
+
 <View style={styles.center}>
   <ScalePop>
     <CheckCircleIcon size={64} color="#22c55e" />
@@ -520,6 +591,8 @@ Combine `ScalePop` and `FadeSlideIn` for a satisfying confirmation screen:
 ### Login error with shake
 
 ```tsx
+import { Shake, ShakeRef, PressScale } from 'react-native-animation-kit';
+
 const shakeRef = useRef<ShakeRef>(null);
 
 const handleSubmit = async () => {
@@ -546,6 +619,8 @@ const handleSubmit = async () => {
 ### Dashboard stats
 
 ```tsx
+import { ZoomFadeIn, CountUp } from 'react-native-animation-kit';
+
 <View style={styles.statsRow}>
   <ZoomFadeIn delay={0}>
     <StatCard label="Revenue">
